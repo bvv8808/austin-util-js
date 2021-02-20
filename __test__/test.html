@@ -5,12 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <script src="../src/main.min.js"></script>
-    <div id="hi"></div>
     <script>
-      console.log("###: ", $_("#hi"));
+      function t(e) {
+        console.log(e.target.scrollTop);
+      }
+    </script>
+    <div id="hi">hihi</div>
+    <div style="height: 2000px">
+      <div
+        onscroll="t(event)"
+        style="height: 100px; border: 4px solid blue; overflow: auto"
+      >
+        <div style="height: 400px"></div>
+      </div>
+      <button onclick="_unobserve($_('#hi'))">unobserve</button>
+    </div>
+    <script>
+      _observe(
+        $_("#hi"),
+        (t) => {
+          t.style.border = "1px solid red";
+          console.log(true);
+        },
+        (t) => {
+          t.style.height = "100px";
+          console.log(false);
+        }
+      );
     </script>
   </body>
 </html>
