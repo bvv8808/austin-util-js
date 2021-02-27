@@ -1,12 +1,12 @@
 {
-  "name": "autin-util-js",
+  "name": "austin-util-js",
   "version": "1.0.0",
   "description": "javascript util for front-end",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest ./__test__"
   },
   "keywords": [],
   "author": "Austin",
-  "license": "ISC"
+  "license": "MIT"
 }
