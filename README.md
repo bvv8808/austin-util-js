@@ -53,3 +53,14 @@ _observe(document.querySelector("#root"), fnO, fnX);
 
 **doms**  
 화면에 나타나거나 사라지는지 더이상 감시 당하지 않을 DOM 객체들입니다. 여러 객체를 배열에 담아 넘겨도 되고, 배열에 담지 않고 하나의 객체만 넘겨도 됩니다.
+
+### \_scroll
+
+`_scroll(mode, fn)`
+화면을 scroll 했을 때 실행할 함수를 등록합니다.
+
+**mode**  
+스크롤의 방향으로 'up', 'down' 둘 중 하나를 지정해야 합니다. up은 위쪽, down은 아래쪽입니다.
+
+**fn**  
+mode에 지정한 방향으로 스크롤이 일어났을 때 실행될 함수입니다.
