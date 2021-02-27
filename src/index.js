@@ -1,4 +1,4 @@
-__observer__ = null;
+let __observer__ = null;
 
 export const $_ = (selector) => {
   let dom = document.querySelector(selector);
@@ -73,7 +73,7 @@ export const _unobserve = (doms) => {
 export const _scroll = (mode, fn) => {
   const isFirefox =
     navigator.userAgent.indexOf("Firefox") === -1 ? false : true;
-  window.addEventListener(isFirefox ? "wheel" : "DOMMouseScroll", (e) => {
+  window.addEventListener(isFirefox ? "DOMMouseScroll" : "wheel", (e) => {
     const delta = isFirefox ? -e.detail : e.wheelDelta;
     if (mode === "up") delta > 0 && fn();
     else if (mode === "down") delta < 0 && fn();

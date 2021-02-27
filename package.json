@@ -1,6 +1,6 @@
 {
   "name": "austin-util-js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "javascript util for front-end",
   "main": "src/index.js",
   "scripts": {
